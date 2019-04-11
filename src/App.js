@@ -8,7 +8,7 @@ export default class App extends Component {
     const a = document.createElement('a');
     a.target = '_blank';
     a.download = blob.name;
-    a.src = URL.createObjectUrl(blob);
+    a.href = URL.createObjectUrl(blob);
     a.click();
   }
 
