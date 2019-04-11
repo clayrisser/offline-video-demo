@@ -1,0 +1,70 @@
+{
+  "name": "offline-video-demo",
+  "version": "0.0.1",
+  "description": "record and download a video",
+  "keywords": [
+    "offline-video-demo",
+    "offline",
+    "video",
+    "record",
+    "download"
+  ],
+  "homepage": "https://github.com/codejamninja/offline-video-demo",
+  "bugs": {
+    "url": "https://github.com/codejamninja/offline-video-demo/issues",
+    "email": "jam@codejam.ninja"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Jam Risser",
+    "email": "jam@codejam.ninja",
+    "url": "https://codejam.ninja"
+  },
+  "files": [
+    "lib"
+  ],
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codejamninja/offline-video-demo"
+  },
+  "scripts": {
+    "build": "npm run test && babel src -d lib",
+    "clean": "git clean -fXd -e \\!node_modules -e \\!node_modules/**/*",
+    "clean:purge": "git clean -fXd",
+    "format": "prettier --write ./src/**/*.js",
+    "lint": "npm run format && eslint ./",
+    "lint:fix": "npm run format && eslint --fix ./",
+    "prepublish": "npm run build",
+    "start": "parcel src/index.html",
+    "test": "npm run lint"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.4.3",
+    "autobind-decorator": "^2.4.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.0",
+    "@babel/core": "^7.2.0",
+    "@babel/node": "^7.2.0",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "babel-preset-jam": "^0.1.0",
+    "eslint": "^5.9.0",
+    "eslint-config-jam": "^0.1.6",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
+    "parcel-bundler": "^1.12.3",
+    "yo": "^2.0.5"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "eslintIgnore": [
+    "lib",
+    "dist",
+    ".cache"
+  ]
+}
