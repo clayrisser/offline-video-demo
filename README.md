@@ -4,6 +4,8 @@
 
 > record and download a video
 
+![](assets/offline-video-demo.png)
+
 Please ★ this repo if you found it useful ★ ★ ★
 
 
